@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <h2 className="text-2xl font-bold tracking-tight uppercase text-[#181411] dark:text-white">Single Tea India</h2>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-10 text-xs font-bold uppercase tracking-widest text-[#897161]">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-xs font-bold uppercase tracking-widest text-[#897161]">
           <a href="#" className="hover:text-primary transition-colors">Shop</a>
           <a href="#" className="hover:text-primary transition-colors">Origins</a>
           <a href="#" className="hover:text-primary transition-colors">Sourcing</a>

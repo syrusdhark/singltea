@@ -23,20 +23,20 @@ const Hero: React.FC<HeroProps> = ({ onCta }) => {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 w-fit animate-fade-in-up">
               <span className="w-2 h-2 rounded-full bg-primary"></span>
-              <span className="text-xs font-semibold tracking-widest uppercase text-primary-dark">2024 Harvest Available</span>
+              <span className="text-[10px] md:text-xs font-semibold tracking-widest uppercase text-primary-dark">2024 Harvest Available</span>
             </div>
-            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-light tracking-[-0.03em] leading-[1.1] text-[#171412] animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              The Soul of <br/>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-light tracking-[-0.03em] leading-[1.1] text-[#171412] animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              The Soul of <br className="hidden sm:block" />
               <span className="font-serif italic text-primary">Indian Origins</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-lg leading-relaxed animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <p className="text-base md:text-lg text-gray-600 max-w-lg leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               Experience the purest single-origin teas, hand-harvested from the mist-covered peaks of the Himalayas to the lush valleys of Assam.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-6 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-            <button 
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <button
               onClick={onCta}
-              className="relative overflow-hidden group rounded-full bg-primary text-white h-14 px-8 text-base font-medium tracking-wide shadow-lg shadow-primary/30 transition-transform hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto relative overflow-hidden group rounded-full bg-primary text-white h-14 px-8 text-base font-medium tracking-wide shadow-lg shadow-primary/30 transition-transform hover:scale-105 active:scale-95"
             >
               <span className="relative z-10">Explore Collection</span>
             </button>
@@ -44,21 +44,21 @@ const Hero: React.FC<HeroProps> = ({ onCta }) => {
               <div className="w-12 h-12 rounded-full border border-current flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <span className="material-symbols-outlined text-[20px]">play_arrow</span>
               </div>
-              <span>Watch our harvest</span>
+              <span className="text-sm md:text-base">Watch our harvest</span>
             </a>
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative h-[500px] lg:h-[700px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          <div className="relative w-[80%] lg:w-[90%] h-[80%] rounded-t-[200px] rounded-b-[20px] overflow-hidden shadow-2xl z-10">
+        <div className="lg:col-span-5 relative h-[400px] sm:h-[500px] lg:h-[700px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div className="relative w-[100%] sm:w-[80%] lg:w-[90%] h-[90%] sm:h-[80%] rounded-t-[100px] sm:rounded-t-[200px] rounded-b-[20px] overflow-hidden shadow-2xl z-10">
             <div className="absolute inset-0 bg-black/10 z-10"></div>
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL9oyVLJlNxtow36D7vsxjnHoAVXT_-6_WOm8wIi00qy8zigdg0sAeetX9ngt5hHNMxK8lwuZWladOaN3Yu9fesL_W9sl9AqN_tyyjsL1N_UpS0vgoYwBzvKEEuZ0OYWMBx6hptTaSDuu9uq8xKFU4VCyRUyhyzeH4bQp5VPUtzV4-5FqaR4-fQpIA7bUExBV72xGTB9998nQnZHklXaQhzRl9qnL_eHGXqxjTJqBD0WPqm-LgMhgoe9f5bM8TxI1Y1urhB8UnvkY" 
-              className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-110" 
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL9oyVLJlNxtow36D7vsxjnHoAVXT_-6_WOm8wIi00qy8zigdg0sAeetX9ngt5hHNMxK8lwuZWladOaN3Yu9fesL_W9sl9AqN_tyyjsL1N_UpS0vgoYwBzvKEEuZ0OYWMBx6hptTaSDuu9uq8xKFU4VCyRUyhyzeH4bQp5VPUtzV4-5FqaR4-fQpIA7bUExBV72xGTB9998nQnZHklXaQhzRl9qnL_eHGXqxjTJqBD0WPqm-LgMhgoe9f5bM8TxI1Y1urhB8UnvkY"
+              className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-110"
               alt="Harvest"
             />
           </div>
-          <div className="absolute bottom-[5%] left-[-5%] lg:left-[0%] w-[180px] h-[220px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-20 hidden md:block">
+          <div className="absolute bottom-[2%] sm:bottom-[5%] left-[-2%] sm:left-[-5%] lg:left-[0%] w-[120px] sm:w-[150px] md:w-[180px] h-[160px] sm:h-[200px] md:h-[220px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-20 hidden sm:block">
             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVwZqu1NypjvWAGeJi13kehM6idIaSNVOESY3dHsHSJcdUHVQGZEtH17I-AoEPIy0CbbnOJ48IoQMS6o0BWgqlIrGRq7ht4wXnHml637-uanemzC8FWS8JlgiM8utKrFYDx_3mmiGKDFd8YQBZsKfFHjZB2IWIGTNWnODY8LSnaHAmqAlz5NEJbeb_7lqAVrUvO0kjHamkmHmDIN9PtXYS5E8a2a2Y1XSguH6-MzopSLDyQDUIQbuOPM18gi8C2moPbM-VEXVaZxc" className="w-full h-full object-cover" alt="Glass Pot" />
           </div>
           {/* Spin Badge */}
@@ -77,7 +77,7 @@ const Hero: React.FC<HeroProps> = ({ onCta }) => {
           </div>
         </div>
       </div>
-      
+
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
         <div className="relative w-6 h-10 rounded-full border-2 border-primary/40 flex justify-center p-1">
           <div className="w-1 h-2 bg-primary rounded-full animate-bounce"></div>

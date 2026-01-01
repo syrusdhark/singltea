@@ -22,17 +22,17 @@ const ProductShowcase: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-hidden py-8 pl-6 lg:pl-12">
-        <div className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory pb-12 gap-6 lg:gap-10 pr-12 items-center h-[55vh] min-h-[450px]">
+      <div className="w-full overflow-hidden py-8 px-6 lg:px-12">
+        <div className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory pb-12 gap-6 lg:gap-10 items-center h-[60vh] md:h-[55vh] min-h-[450px]">
           {PRODUCTS.map((product) => (
-            <div 
+            <div
               key={product.id}
-              className="relative flex-shrink-0 snap-center group cursor-pointer w-[300px] md:w-[360px] lg:w-[400px] h-full transition-transform duration-500 hover:scale-[1.02]"
+              className="relative flex-shrink-0 snap-center group cursor-pointer w-[280px] sm:w-[320px] md:w-[360px] lg:w-[400px] h-full transition-transform duration-500 hover:scale-[1.02]"
             >
               <div className="relative w-full h-full rounded-xl overflow-hidden bg-white shadow-xl border border-black/5">
                 <div className="absolute inset-0 z-0">
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     alt={product.name}
                   />
@@ -60,7 +60,7 @@ const ProductShowcase: React.FC = () => {
                     <div className="pt-4 border-t border-white/20 flex flex-wrap gap-x-4 gap-y-2 text-white/90 text-xs">
                       {product.notes.map(note => (
                         <span key={note} className="flex items-center gap-1">
-                           <span className="material-symbols-outlined text-[14px]">eco</span> {note}
+                          <span className="material-symbols-outlined text-[14px]">eco</span> {note}
                         </span>
                       ))}
                     </div>
